@@ -1,0 +1,117 @@
+﻿<Window x:Class="WPF_Min_Personlige_Profil.MainWindow"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"     
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CV" Height="526" Width="600">
+    <Grid Margin="10,10,10,7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Left Column -->
+            <ColumnDefinition Width="*"/>
+            <!-- Right Column -->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="486.023"/>
+        </Grid.RowDefinitions>
+
+        <!-- Profile Picture -->
+        <Image Grid.Row="0" Source="C:\Users\Andreas\Desktop\PluralSight - C# Fundamentals\New test\Assets\mig.jpg" Height="Auto" Width="200" HorizontalAlignment="Center" Margin="0,0,0,349"/>
+
+        <!-- Left Column Content -->
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0,150,0,0" Grid.RowSpan="2">
+
+            <!-- Contact Section -->
+            <TextBlock Text="Kontakt" FontWeight="Bold" FontSize="16" Margin="0,0,0,5" Height="20"/>
+            <TextBlock Text="Telefon: 93989364" Margin="0,0,0,2"/>
+            <TextBlock Text="Email: michaelsen87@hotmail.dk" Margin="0,0,0,2"/>
+
+            <!-- LinkedIn Section -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                <Image Source="C:\Users\Andreas\Desktop\PluralSight - C# Fundamentals\New test\Assets\LinkedIn.png" Height="16" Width="16"/>
+                <TextBlock Margin="5,0,0,0">
+                    <Hyperlink NavigateUri="https://www.linkedin.com/in/andymichaelsen/" RequestNavigate="Hyperlink_RequestNavigate">
+                        LinkedIn
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+            <!-- GitHub Section -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Image Source="C:\Users\Andreas\Desktop\PluralSight - C# Fundamentals\New test\Assets\Git.png" Height="16" Width="16"/>
+                <TextBlock Margin="5,0,0,0">
+                    <Hyperlink NavigateUri="https://github.com/Zikka1987" RequestNavigate="Hyperlink_RequestNavigate">
+                        GitHub
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+            <!-- Education Section -->
+            <TextBlock Text="Uddannelse" FontWeight="Bold" FontSize="16" Margin="0,10,0,5"/>
+            <TextBlock Text="HF Eksamen - KVUC 2012" Margin="0,0,0,10"/>
+
+            <!-- Kompetence Section -->
+            <TextBlock Text="Kompetence" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+            <BulletDecorator Margin="0,0,0,2">
+                <BulletDecorator.Bullet>
+                    <Ellipse Fill="Black" Width="5" Height="5"/>
+                </BulletDecorator.Bullet>
+                <TextBlock Text="C#" Margin="5,0,0,0"/>
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,2">
+                <BulletDecorator.Bullet>
+                    <Ellipse Fill="Black" Width="5" Height="5"/>
+                </BulletDecorator.Bullet>
+                <TextBlock Text="JavaScript" Margin="5,0,0,0"/>
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,2">
+                <BulletDecorator.Bullet>
+                    <Ellipse Fill="Black" Width="5" Height="5"/>
+                </BulletDecorator.Bullet>
+                <TextBlock Text="Online Markedsføring" Margin="5,0,0,0"/>
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,2">
+                <BulletDecorator.Bullet>
+                    <Ellipse Fill="Black" Width="5" Height="5"/>
+                </BulletDecorator.Bullet>
+                <TextBlock Text="Ledelse" Margin="5,0,0,0"/>
+            </BulletDecorator>
+            <BulletDecorator Margin="0,0,0,10">
+                <BulletDecorator.Bullet>
+                    <Ellipse Fill="Black" Width="5" Height="5"/>
+                </BulletDecorator.Bullet>
+                <TextBlock Text="Kundeservice" Margin="5,0,0,0"/>
+            </BulletDecorator>
+        </StackPanel>
+
+        <!-- Right Column Content -->
+        <StackPanel Grid.Column="1" Margin="20,0,0,0">
+            <!-- Headline -->
+            <TextBlock Text="Andreas Michaelsen" FontSize="28" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBlock Text="C# Udvikler" FontSize="18" FontStyle="Italic" Margin="0,0,0,20"/>
+
+            <!-- About Me Section -->
+            <TextBlock Text="Om Mig" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+            <TextBlock TextWrapping="Wrap" Text="Jeg bor i Århus med min kone og vores 6 årige datter. Lige nu er jeg ved at uddanne mig som softwareudvikler hos Mercantec, Viborg. Jeg fokuserer på at udvikle mine færdigheder i C#, JavaScript og SQL, og jeg søger en læreplads med start i januar 2025. Jeg ser frem til at anvende min viden og fortsætte min faglige udvikling i et professionelt miljø. At arbejde indenfor denne branche er ikke blot et middel til et mål for mig – det er min passion, og det er et område, som jeg nysgerrigt opsøger ny viden omkring i de få stille stunder, jeg har. I vil derfor få en yderst passioneret og motiveret lærling." Margin="0,0,0,20"/>
+
+            <!-- CV Section -->
+            <TextBlock Text="Erfaring" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+            <!-- Placeholder for 4 previous positions -->
+            <StackPanel>
+                <!-- Position 1 -->
+                <TextBlock Text="3 Business | Januar 2024 - Maj 2024 | København, Danmark" FontWeight="Bold" Margin="0,5,0,0"/>
+                <TextBlock Text="B2B Salgskonsulent" TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                <!-- Position 2 -->
+                <TextBlock Text="AM Digital  | April 2022 - Januar 2024 | Phuket, Thailand" FontWeight="Bold" Margin="0,5,0,0"/>
+                <TextBlock Text="Ejer - Digitalt Markedsføringsbureau" TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                <!-- Position 3 -->
+                <TextBlock Text="Tietoevry | September 2020 - April 2022 | Tallinn, Estland" FontWeight="Bold" Margin="0,5,0,0"/>
+                <TextBlock Text="Help Desk Support" TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                <!-- Position 4 -->
+                <TextBlock Text="AM Social  | | Marts 2015 - August 2020 | Phuket, Thailand" FontWeight="Bold" Margin="0,5,0,0"/>
+                <TextBlock Text="Ejer - Digitalt Markedsføringsbureau" TextWrapping="Wrap" Margin="0,0,0,5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
